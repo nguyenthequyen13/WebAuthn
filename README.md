@@ -12,4 +12,6 @@ Xác thực 2 yếu tố (2FA) cũng không tốt hơn nhiều. 2FA truyền th�
 
 Từ đó Passwordless authentication thay thế các yếu tố yếu của 2FA bằng các yếu tố mạnh hơn đáng kể. Do đó, giải pháp xác thực không cần mật khẩu sẽ cải thiện tính bảo mật và trải nghiệm người dùng bằng cách loại bỏ trở ngại khỏi quá trình đăng nhập (Loại bỏ bước nhập OTP).
 
-#### Passwordless authentication: Nó là gì và cách thức hoạt động của nó
+#### Passwordless authentication: Nó là gì và cách thức hoạt động của nó?
+
+Passwordless authentication: một hình thức xác thực không bao giờ sử dụng mật khẩu. Mật khẩu không được sử dụng làm phương thức xác thực thay thế hoặc thậm chí là phương pháp dự phòng. Mật khẩu cũng không được lưu trữ trong kho mật khẩu hoặc trình quản lý.
