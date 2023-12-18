@@ -20,5 +20,15 @@ Passwordless authentication: một hình thức xác thực không bao giờ s�
 
 Mục đích của việc không cần mật khẩu là sử dụng phương thức xác thực an toàn hơn. Mật khẩu là một yếu tố kiến ​​thức. Sẽ không có nhiều cải thiện nếu bạn thay thế mật khẩu bằng mật khẩu khác, giống như yếu tố kiến ​​​​thức không an toàn.
 
+#### Lợi ích của việc xác thực không cần mật khẩu
 
-[Nguồn](https://www.beyondidentity.com/resources/passwordless-authentication)
+Passwordless authentication mang lại một số lợi ích:
+
+1. Dừng việc chiếm đoạt tài khoản khỏi các cuộc tấn công thông tin xác thực: Việc xóa mật khẩu làm phương thức xác thực sẽ **loại bỏ tất cả các cuộc tấn công dựa trên mật khẩu.** Những kẻ tấn công đơn giản là không thể sử dụng mật khẩu để đăng nhập vì chúng không tồn tại. Xác thực không cần mật khẩu có thể chống lại việc thông tin đăng nhập bị đánh cắp hoặc rò rỉ trong việc nhồi thông tin xác thực (credential stuffing), bẻ khóa thông tin xác thực, tấn công bảng cầu vồng (rainbow table attacks), ransomware thông qua RDP, kỹ thuật xã hội và tấn công lừa đảo.
+
+2. Cải thiện trải nghiệm người dùng: Với thông tin đăng nhập không cần nhấp chuột, xác thực không cần mật khẩu sẽ loại bỏ những khó khăn khi xác thực. Người dùng không cần phải sử dụng thiết bị thứ hai, kiểm tra email, ghi nhớ mật khẩu hoặc gặp rắc rối khi đặt lại chúng.
+3. Tiết kiệm thời gian và tiền bạc khi đặt lại mật khẩu và gọi tới bộ phận trợ giúp: Người dùng không còn cần phải nhớ các mật khẩu duy nhất hoặc thường xuyên đặt lại chúng như một phần của chính sách mật khẩu mạnh, đồng nghĩa với việc bộ phận CNTT sẽ ít phải làm việc hơn
+4. Tăng cường tình trạng bảo mật của bạn bằng tính năng xác thực dựa trên rủi ro liên tục: Người dùng được cấp lại quyền với mỗi yêu cầu truy cập để đảm bảo rằng tình trạng rủi ro của người dùng không thay đổi.
+
+
+[Nguồn Beyond Identity](https://www.beyondidentity.com/resources/passwordless-authentication)
