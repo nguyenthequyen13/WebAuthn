@@ -15,3 +15,10 @@ Từ đó Passwordless authentication thay thế các yếu tố yếu của 2FA
 #### Passwordless authentication: Nó là gì và cách thức hoạt động của nó?
 
 Passwordless authentication: một hình thức xác thực không bao giờ sử dụng mật khẩu. Mật khẩu không được sử dụng làm phương thức xác thực thay thế hoặc thậm chí là phương pháp dự phòng. Mật khẩu cũng không được lưu trữ trong kho mật khẩu hoặc trình quản lý.
+
+Đây là một điểm quan trọng cần hiểu vì một số nhà cung cấp công nghệ cho biết giải pháp xác thực của họ không cần mật khẩu nhưng trong khi thực tế thì không. Họ tiếp tục sử dụng mật khẩu làm bản sao lưu nên bất kỳ ai cũng có thể sử dụng mật khẩu đó để đăng nhập và bạn vẫn dễ bị tấn công dựa trên mật khẩu.
+
+Mục đích của việc không cần mật khẩu là sử dụng phương thức xác thực an toàn hơn. Mật khẩu là một yếu tố kiến ​​thức. Sẽ không có nhiều cải thiện nếu bạn thay thế mật khẩu bằng mật khẩu khác, giống như yếu tố kiến ​​​​thức không an toàn.
+
+
+[Nguồn](https://www.beyondidentity.com/resources/passwordless-authentication)
