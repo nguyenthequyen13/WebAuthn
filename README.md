@@ -26,10 +26,24 @@ Passwordless authentication mang lại một số lợi ích:
 
 1. Dừng việc chiếm đoạt tài khoản khỏi các cuộc tấn công thông tin xác thực: Việc xóa mật khẩu làm phương thức xác thực sẽ **loại bỏ tất cả các cuộc tấn công dựa trên mật khẩu.** Những kẻ tấn công đơn giản là không thể sử dụng mật khẩu để đăng nhập vì chúng không tồn tại. Xác thực không cần mật khẩu có thể chống lại việc thông tin đăng nhập bị đánh cắp hoặc rò rỉ trong việc nhồi thông tin xác thực (credential stuffing), bẻ khóa thông tin xác thực, tấn công bảng cầu vồng (rainbow table attacks), ransomware thông qua RDP, kỹ thuật xã hội và tấn công lừa đảo.
 
-2. Cải thiện trải nghiệm người dùng: Với thông tin đăng nhập không cần nhấp chuột, xác thực không cần mật khẩu sẽ loại bỏ những khó khăn khi xác thực. Người dùng không cần phải sử dụng thiết bị thứ hai, kiểm tra email, ghi nhớ mật khẩu hoặc gặp rắc rối khi đặt lại chúng.
+2. Cải thiện trải nghiệm người dùng: Với thông tin đăng nhập không cần nhấp chuột, Passwordless authentication sẽ loại bỏ những khó khăn khi xác thực. Người dùng không cần phải sử dụng thiết bị thứ hai, kiểm tra email, ghi nhớ mật khẩu hoặc gặp rắc rối khi đặt lại chúng.
 3. Tiết kiệm thời gian và tiền bạc khi đặt lại mật khẩu và gọi tới bộ phận trợ giúp: Người dùng không còn cần phải nhớ các mật khẩu duy nhất hoặc thường xuyên đặt lại chúng như một phần của chính sách mật khẩu mạnh, đồng nghĩa với việc bộ phận CNTT sẽ ít phải làm việc hơn
 4. Tăng cường tình trạng bảo mật của bạn bằng tính năng xác thực dựa trên rủi ro liên tục: Người dùng được cấp lại quyền với mỗi yêu cầu truy cập để đảm bảo rằng tình trạng rủi ro của người dùng không thay đổi.
 
 #### Cách thức hoạt động của Passwordless authentication?
+
+Passwordless authentication đề cập đến phương pháp xác minh danh tính người dùng mà không cần sử dụng mật khẩu. Thay vì mật khẩu, người dùng xác thực bằng cách sử dụng thứ họ có (chẳng hạn như thiết bị di động) hoặc thứ gì đó của họ (chẳng hạn như sinh trắc học). Mỗi khi người dùng yêu cầu quyền truy cập, một thông báo xác thực mới sẽ được tạo. Do đó, không có thông tin xác thực nào được cố định trong nền tảng không mật khẩu nên không có gì để kẻ tấn công đánh cắp.
+
+Passwordless authentication tận dụng công nghệ được tích hợp trong các thiết bị hiện đại để cung cấp xác thực an toàn. Những công nghệ này là sinh trắc học và Mô-đun nền tảng đáng tin cậy (TPM). TPM là một khu vực an toàn nơi dữ liệu nhạy cảm có thể được lưu trữ. Trong trường hợp xác thực không cần mật khẩu, dữ liệu nhạy cảm đó là khóa mật mã riêng. TPM ký chứng chỉ bằng khóa riêng có thể được xác thực bằng khóa chung tương ứng.
+
+Mô hình này vốn đã được tin cậy. Trên thực tế, nó được sử dụng vô số lần trong ngày bởi mọi người ở khắp mọi nơi gửi thông tin cá nhân qua Internet. Mô hình này được Transport Layer Security (TLS) sử dụng để đảm bảo rằng dữ liệu riêng tư được trao đổi với máy chủ vẫn ở chế độ riêng tư và an toàn. TLS sử dụng chứng chỉ X.509 dựa trên mật mã bất đối xứng và cặp khóa công khai.
+
+Giải pháp xác thực không cần mật khẩu tận dụng chứng chỉ X.509 mà không cần tổ chức phát hành chứng chỉ hoặc bất kỳ quản lý chứng chỉ nào. Nó chỉ đơn giản là mở rộng Chuỗi tin cậy™ do TLS thiết lập cho người dùng và thiết bị của họ.
+
+Sử dụng chứng chỉ X.509 và cặp khóa công khai sẽ an toàn hơn các phương thức xác thực khác. Mật khẩu, cụm mật khẩu và mã PIN sử dụng bí mật chung—một phần dữ liệu được lưu trữ trong cơ sở dữ liệu có thể dễ bị xâm phạm. Các khóa phần cứng có vấn đề bảo mật đã biết với Bluetooth và Giao tiếp trường gần (NFC). Họ cũng thiếu chế độ bảo mật thiết bị chi tiết, toàn diện.
+
+Ngoài các lỗ hổng được đề cập, MFA còn tăng khả năng hiển thị thông qua việc hack SIM, phần mềm độc hại và tràn thông báo. Tuy nhiên, với công nghệ X.509 và TLS, khóa riêng được lưu trữ an toàn trong TPM của thiết bị cá nhân. Bất kỳ ai cũng không thể xóa hoặc xem khóa riêng—kể cả người dùng.
+
+Một số tổ chức có hệ thống cũ vẫn yêu cầu người dùng phải có mật khẩu trong thư mục. Bạn cũng có thể sử dụng xác thực không cần mật khẩu cho các hệ thống này. Trong bảng điều khiển Beyond Identity, bạn có thể thiết lập chính sách truy cập để không ai có thể sử dụng mật khẩu để đăng nhập. Nếu kẻ tấn công cố gắng truy cập vào hệ thống bằng mật khẩu bị đánh cắp, cảnh báo sẽ được kích hoạt và kẻ tấn công sẽ bị từ chối truy cập.
 
 [Nguồn Beyond Identity](https://www.beyondidentity.com/resources/passwordless-authentication)
