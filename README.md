@@ -1,4 +1,4 @@
-### Passwordless Authentication: Nó là gì và cách thức hoạt động của nó
+### Passwordless Authentication: Nó là gì và cách thức hoạt động của nó?
 
 #### Giới thiệu
 
@@ -30,5 +30,6 @@ Passwordless authentication mang lại một số lợi ích:
 3. Tiết kiệm thời gian và tiền bạc khi đặt lại mật khẩu và gọi tới bộ phận trợ giúp: Người dùng không còn cần phải nhớ các mật khẩu duy nhất hoặc thường xuyên đặt lại chúng như một phần của chính sách mật khẩu mạnh, đồng nghĩa với việc bộ phận CNTT sẽ ít phải làm việc hơn
 4. Tăng cường tình trạng bảo mật của bạn bằng tính năng xác thực dựa trên rủi ro liên tục: Người dùng được cấp lại quyền với mỗi yêu cầu truy cập để đảm bảo rằng tình trạng rủi ro của người dùng không thay đổi.
 
+#### Cách thức hoạt động của Passwordless authentication?
 
 [Nguồn Beyond Identity](https://www.beyondidentity.com/resources/passwordless-authentication)
